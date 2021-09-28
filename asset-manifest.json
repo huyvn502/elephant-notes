@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/elephant-notes/static/css/main.11e308b9.chunk.css",
+    "main.js": "/elephant-notes/static/js/main.2f13a107.chunk.js",
+    "main.js.map": "/elephant-notes/static/js/main.2f13a107.chunk.js.map",
+    "runtime-main.js": "/elephant-notes/static/js/runtime-main.13bb0301.js",
+    "runtime-main.js.map": "/elephant-notes/static/js/runtime-main.13bb0301.js.map",
+    "static/js/2.f50a0e75.chunk.js": "/elephant-notes/static/js/2.f50a0e75.chunk.js",
+    "static/js/2.f50a0e75.chunk.js.map": "/elephant-notes/static/js/2.f50a0e75.chunk.js.map",
+    "static/js/3.4cc93f37.chunk.js": "/elephant-notes/static/js/3.4cc93f37.chunk.js",
+    "static/js/3.4cc93f37.chunk.js.map": "/elephant-notes/static/js/3.4cc93f37.chunk.js.map",
+    "index.html": "/elephant-notes/index.html",
+    "static/css/main.11e308b9.chunk.css.map": "/elephant-notes/static/css/main.11e308b9.chunk.css.map",
+    "static/js/2.f50a0e75.chunk.js.LICENSE.txt": "/elephant-notes/static/js/2.f50a0e75.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.13bb0301.js",
+    "static/js/2.f50a0e75.chunk.js",
+    "static/css/main.11e308b9.chunk.css",
+    "static/js/main.2f13a107.chunk.js"
+  ]
+}
