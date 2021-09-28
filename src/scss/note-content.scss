@@ -1,0 +1,50 @@
+@use './note-content/display-tags-note.scss';
+
+#note-content-container {
+    overflow: hidden;
+    p, span {
+        color: #5a5f69;
+    }
+    
+    #title-note {
+        border: none;
+        outline: none;
+
+        font-size: 1.75rem;
+        font-weight: 600;
+
+        width: 100%;
+        margin: 1.245rem 0 ;
+        &:focus {
+            border-bottom: 1px solid #b4b7bb;
+        }
+    }
+    #detail-note {
+        border: none;
+        outline: none;
+        
+        width: 100%;
+        height: 60%;
+        padding: 2% 1%;
+        resize: none;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #e3e7e9;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #c3c4c5;
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #a7a9aa;
+        }
+        &:focus {
+            border-bottom: 1px solid #b4b7bb;
+        }
+    }
+}

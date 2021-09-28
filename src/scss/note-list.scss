@@ -1,0 +1,158 @@
+@use './note-list/note-item.scss';
+
+#note-list-management {
+    position: relative;
+    p {
+        color: #909296;
+    }
+    .note-list-heading {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-left: 9%;
+        padding-right: 6%;
+        h2 {
+            display: inline-block;
+        }
+        #searchTerm {
+            width: 20%;
+            border: 1px solid transparent;
+            
+            display: flex;
+            justify-content: right;
+            padding: 2% 0;
+            border-radius: 15px;
+
+            &.is-active {
+                border: 1px solid #b4b7bb;
+                transition: border 0.4s ease;
+                animation: appearing-search-term 1s ease 0.2s forwards;
+                &.is-focused {
+                    border: 1px solid #a4a6ac;
+                    box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.07), -5px 0 10px rgba($color: #000000, $alpha: 0.07);
+                    transition: 0.6s ease 0.1s;
+                }
+            }
+
+            
+            input {
+                width: 0;
+                outline: none;
+                margin-right: 3%;
+                font-size: 1rem;
+
+                border: none;
+                background: none;
+                outline: none;
+                &.is-active {
+                    width: 80%;
+                }
+            }
+            #searchTerm-btn {
+                display: inline-block;
+                margin-right: 10px;
+
+                padding: 0;
+                border: none;
+                background: none;
+                #search-shape {
+                    width: 17px;
+                    height: 17px;
+                    border: 2px solid #b4b7bb;
+                    border-radius: 50%;
+                    position: relative;
+                    &::after {
+                        display: inline-block;
+                        position: relative;
+                        content: '';
+                        top: 4px;
+                        left: 7px;
+                        width: 7px;
+                        height: 0px;
+                        border-top: 2px solid #b4b7bb;
+                        transform: rotate(45deg);
+                    }
+                }
+                &:hover {
+                    cursor: pointer;
+                    #search-shape {
+                        box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.1);
+                        transition: box-shadow 0.5s ease 0.1s;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .note-list-container {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 75%;
+        border: 1px solid #e3e7e9;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #e3e7e9;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #c3c4c5;
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #a7a9aa;
+        }
+    }
+
+    #add-new-notes-container {
+        position: absolute;
+        bottom: 4%;
+        z-index: 5;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+
+        border: 1px dashed #b4b7bb;
+        border-radius: 8px;
+        margin: 0 9%;
+        padding: 2% 0;
+
+        #add-new-notes {
+            width: 80%;
+            color: #909296;
+            border: none;
+            background: none;
+
+            font-size: 1.15rem;
+
+            i {
+                background-color: white;
+                padding: 3.5% 3.9%;
+                border-radius: 50%;
+                margin-right: 3%;
+            }
+            &:hover {
+                cursor: pointer;
+                color: #636568;
+                transform: scale(1.1,1.1);
+                transition: 0.5s ease 0.2s;
+            }
+        }
+    }
+
+}
+
+@keyframes appearing-search-term {
+    from {
+        width: 20%;
+    }
+    to {
+        width: 70%;
+    }
+}
+
+

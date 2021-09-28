@@ -1,0 +1,54 @@
+@use './side-bar.scss';
+@use  './note-list.scss';
+@use './note-content.scss';
+@use  './tag-management.scss';
+@use './add-note-box.scss';
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e4e9ec;
+    position: relative;
+    
+    #app {
+        width: 90%;
+        height: 85vh;
+        display: flex;
+        border-radius: 30px;
+        box-shadow: 20px 20px 30px rgb(0, 0, 0, 0.1), -20px 0 30px rgb(0, 0, 0, 0.1);
+        @mixin general-sides-style($width, $radius, $color, $value) {
+            width: $width;
+            border-radius: $radius;
+            background-color: $color;
+            padding: $value;
+        }
+        #side-bar {
+            @include general-sides-style(21.65%, 30px 0 0 30px, #49746a, 3.45% 3.45% 3.45% 0);
+        }
+        #note-list-management {
+            @include general-sides-style(35.65%, none, #f4f6f7, 3.45% 0);
+        }
+        #note-content-container {
+            @include general-sides-style(42.7%, 0 30px 30px 0, white, 3.45%);
+        }
+    }
+    h1 {
+        font-weight: 500;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #root {
+        #app {
+            width: 100%;
+            height: 100vh;
+            border-radius: none;
+            #side-bar, #note-content-container {
+                border-radius: 0 0 0 0;
+            }
+        }
+    }
+}
